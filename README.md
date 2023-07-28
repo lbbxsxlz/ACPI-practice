@@ -1,4 +1,4 @@
-# ACPI-practice
+# UEFI-practice
 
 ## Environment for building
 ```bash
