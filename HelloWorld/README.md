@@ -58,5 +58,11 @@
 
     sudo qemu-system-x86_64 -M q35,accel=kvm -cpu host -m 4096 -drive if=pflash,format=raw,file=./ovmf/OVMF_CODE.fd,readonly=on -drive if=pflash,format=raw,file=./ovmf/OVMF_VARS.fd,readonly=on -drive format=raw,file=fat:rw:./ovmf/esp -net none
 
+You may encounter the following errors(I use the MobaXterm to access the linux host):
 
+    MoTTY X11 proxy: Unsupported authorisation protocol
+    gtk initialization failed
 
+Please use the following command to fix the error:
+
+    sudo cp /home/$user/.Xauthority /root/
