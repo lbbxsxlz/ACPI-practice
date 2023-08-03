@@ -23,5 +23,5 @@ make -C BaseTools
 build -a IA32 -a X64 -t GCC5 -p OvmfPkg/OvmfPkgIa32X64.dsc -b DEBUG -D DEBUG_ON_SERIAL_PORT
 ```
 
-## First Demo(Hello World)
-![demo show](HelloWorld/hello.jpg)
+## Demo Show(Hello World)
+![demo show](hello.jpg)
