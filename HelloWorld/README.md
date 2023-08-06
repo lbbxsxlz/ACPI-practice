@@ -1,13 +1,13 @@
 # Hello World
 
 ## Build OVMF
-
+    cd ../edk2
     build -a X64 -t GCC5 -p OvmfPkg/OvmfPkgX64.dsc -b DEBUG
 
 ## Build MdeModulePkg
 
     build -a X64 -t GCC5 -p MdeModulePkg/MdeModulePkg.dsc -b DEBUG
-
+    cd -
 ## Build ESP partition
 
     mkdir -p ovmf
@@ -66,3 +66,19 @@ You may encounter the following errors(I use the MobaXterm to access the linux h
 Please use the following command to fix the error:
 
     sudo cp /home/$user/.Xauthority /root/
+
+
+Another error:
+
+    MoTTY X11 proxy: Authorisation not recognised
+
+    In case you are trying to start a graphical application with "sudo", read this article in order to avoid this issue:
+    https://blog.mobatek.net/post/how-to-keep-X11-display-after-su-or-sudo/
+
+    gtk initialization failed
+
+Fix:
+
+    sudo xauth add $(xauth -f ~binbin/.Xauthority list | tail -1)
+
+![Hello World](hello.jpg)
