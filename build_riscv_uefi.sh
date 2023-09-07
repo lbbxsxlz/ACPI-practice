@@ -4,6 +4,9 @@
 git clone https://github.com/tianocore/edk2-platforms.git
 cd edk2-platforms
 git submodule update --init
+cp ../U540.patch ./
+git apply U540.patch
+rm U540.patch
 cd -
 
 PWD=$(pwd)
