@@ -1,2 +1,5 @@
 edk2
+edk2-platforms
 ovmf
+Build
+.vscode
