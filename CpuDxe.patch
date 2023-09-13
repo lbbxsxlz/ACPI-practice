@@ -1,0 +1,38 @@
+diff --git a/UefiCpuPkg/CpuDxeRiscV64/CpuDxe.c b/UefiCpuPkg/CpuDxeRiscV64/CpuDxe.c
+index 2af3b62234..bd5544fe19 100644
+--- a/UefiCpuPkg/CpuDxeRiscV64/CpuDxe.c
++++ b/UefiCpuPkg/CpuDxeRiscV64/CpuDxe.c
+@@ -296,7 +296,8 @@ CpuSetMemoryAttributes (
+   IN UINT64                 Attributes
+   )
+ {
+-  return RiscVSetMemoryAttributes (BaseAddress, Length, Attributes);
++  //return RiscVSetMemoryAttributes (BaseAddress, Length, Attributes);
++  return EFI_SUCCESS;
+ }
+ 
+ /**
+@@ -342,8 +343,8 @@ InitializeCpu (
+   //
+   // Enable MMU
+   //
+-  Status = RiscVConfigureMmu ();
+-  ASSERT_EFI_ERROR (Status);
++  // Status = RiscVConfigureMmu ();
++  // ASSERT_EFI_ERROR (Status);
+ 
+   //
+   // Install Boot protocol
+diff --git a/UefiCpuPkg/CpuDxeRiscV64/CpuDxeRiscV64.inf b/UefiCpuPkg/CpuDxeRiscV64/CpuDxeRiscV64.inf
+index 9d9a5ef8f2..04008ead43 100644
+--- a/UefiCpuPkg/CpuDxeRiscV64/CpuDxeRiscV64.inf
++++ b/UefiCpuPkg/CpuDxeRiscV64/CpuDxeRiscV64.inf
+@@ -37,7 +37,7 @@
+   TimerLib
+   PeCoffGetEntryPointLib
+   RiscVSbiLib
+-  RiscVMmuLib
++  #RiscVMmuLib
+   CacheMaintenanceLib
+ 
+ [Sources]
