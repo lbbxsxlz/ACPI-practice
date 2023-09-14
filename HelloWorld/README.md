@@ -7,7 +7,7 @@
 ## Build MdeModulePkg
 
     build -a X64 -t GCC5 -p MdeModulePkg/MdeModulePkg.dsc -b DEBUG
-    cd -
+    cd ../
 ## Build ESP partition
 
     mkdir -p ovmf

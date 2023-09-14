@@ -9,9 +9,9 @@
     ln -sf ../MyHelloWorld/MyHelloWorldPkg MyHelloWorldPkg
 
     source edksetup.sh
-    make -C BaseTool
+    make -C BaseTools
     build -a IA32 -a X64 -t GCC5 -p MyHelloWorldPkg/MyHelloWorldPkg.dsc -b DEBUG
-    cd -
+    cd ../
 
 ## Validation
 
