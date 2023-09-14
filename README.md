@@ -9,8 +9,8 @@ sudo dpkg -i nasm_2.15.05-1_amd64.deb
 ### Using docker container as a building environment
 [ref](Dockerfile)
 ```bash
-docker build -t "ubuntu_acpi" .
-sudo docker run -v $PWD:/opt/workspace --name acpi_test --privileged -it ubuntu_acpi
+docker build -t "ubuntu_uefi" .
+sudo docker run -v $PWD:/opt/workspace --name edk2_build --privileged -it ubuntu_uefi
 ```
 ## Build edk2
 ```bash
